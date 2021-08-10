@@ -1,20 +1,20 @@
 library(gert)
 
 # 1a. Create a branch for the results on the remote repository (which will be Nomogram_Website)
-git_branch_list(repo = "C:\\Users\\vertosie\\Documents\\GitHub\\results4")
-git_branch_create(branch = "results", repo = "C:\\Users\\vertosie\\Documents\\GitHub\\results4", checkout = TRUE)
+git_branch_list(repo = "C:\\Users\\vertosie\\Documents\\GitHub\\results1")
+git_branch_create(branch = "results", repo = "C:\\Users\\vertosie\\Documents\\GitHub\\results1", checkout = TRUE)
 # TODO: not sure whether TRUE or FALSE for checkout here...
 
 # 1b. Confirm branch exists on that other repo
-git_branch_list(repo = "C:\\Users\\vertosie\\Documents\\GitHub\\results4")
+git_branch_list(repo = "C:\\Users\\vertosie\\Documents\\GitHub\\results1")
 
 # 1c. Push branch to that repo
-git_push(repo = "C:\\Users\\vertosie\\Documents\\GitHub\\results4")
+git_push(repo = "C:\\Users\\vertosie\\Documents\\GitHub\\results1")
 
 # 2. Add remote for this repository
 git_remote_remove("results")
 git_remote_list()
-git_remote_add(url = "https://github.com/emilyvertosick/results4.git", name = "results")
+git_remote_add(url = "https://github.com/emilyvertosick/results1.git", name = "results")
 git_remote_list()
 
 # 3. Stage files to be committed
@@ -30,7 +30,7 @@ git_fetch(remote = "results")
 git_push(remote = "results")
 
 # 5. Pull down repository changes for other repo
-git_fetch(repo = "C:\\Users\\vertosie\\Documents\\GitHub\\results3")
+git_fetch(repo = "C:\\Users\\vertosie\\Documents\\GitHub\\results1")
 
 # 6. Merge remote/results branch back into master
-git_merge(ref = "origin/remote/results", repo = "C:\\Users\\vertosie\\Documents\\GitHub\\test2")
+git_merge(ref = "origin/remote/results", repo = "C:\\Users\\vertosie\\Documents\\GitHub\\unique")
